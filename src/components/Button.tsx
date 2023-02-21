@@ -13,7 +13,7 @@ const CustomButton = styled.button<ButtonPropsType>`
     css`
       width: 7rem;
       height: 3.5rem;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
     `}
   &:hover {
     filter: brightness(85%);
