@@ -36,10 +36,13 @@
 - 2023 / 02 / 21
   - [x] Repository, Notion 세팅
   - [x] 로고, 색깔 선택
-  - [ ] Front 세팅
+  - [x] Front 세팅
   - [ ] Back 세팅
   
 ## Folder Tree
+
+> Folder tree의 경우에는 업데이트 빈도가 낮습니다.
+
 ```
 ├── public
 │   ├── favicon.ico
