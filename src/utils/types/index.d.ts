@@ -13,3 +13,9 @@ export interface InputPropsType {
   placeholder: string;
   value: string;
 }
+
+export interface userInfo {
+  userName: string;
+  photoURL: string;
+  description: string | null;
+}
