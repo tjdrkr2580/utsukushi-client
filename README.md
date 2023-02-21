@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Utsukushi - 마크다운 블로그
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![image](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e1782945-f39b-4a27-b5bc-f4f27d80e4f9/utsukushi.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230221%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230221T061443Z&X-Amz-Expires=86400&X-Amz-Signature=be13535fb5f686c1a356f30100273331e81d600aebdc73b043999eb5facca045&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22utsukushi.png%22&x-id=GetObject)
 
-### `yarn start`
+> 본 페이지는 혼자서 찾아가면서 개발하는 연습용 프로젝트입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Darkmode Primary Color : #635985
+  - [darkmode color hunt templates](https://colorhunt.co/palette/635985443c6839305318122b)
+- Lightmode Primary Color : #B088F9
+  - [lightmode color hunt templates](https://colorhunt.co/palette/bedcfa98acf8b088f9da9ff9)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Stack
 
-### `yarn test`
+| Stack                          | Classification |
+| ------------------------------ | -------------- |
+| React                          | Front          |
+| StoryBook                      | Front          |
+| Recoil                         | Front          |
+| Styled-components              | Front          |
+| React-Markdown                 | Front          |
+| Codemirror                     | Front          |
+| Nest                           | Back           |
+| MongoDB Alias                  | Back           |
+| Bcrypt                         | Back           |
+| ETC..                          | Etc..          |
+| Pretendard, Cascadia-code, etc | Font           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Ticket
 
-### `yarn build`
+- [Utsukishi Ticket](https://tjdrkr2580.notion.site/2b361f31406f4230aa3e3df62746ae60?v=7c5b1c72a647454fb81bf3f354b0796d)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **What did you do today?**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 2023 / 02 / 21
+  - [x] Repository, Notion 세팅
+  - [x] 로고, 색깔 선택
+  - [ ] Front 세팅
+  - [ ] Back 세팅
