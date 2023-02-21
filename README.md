@@ -38,3 +38,27 @@
   - [x] 로고, 색깔 선택
   - [ ] Front 세팅
   - [ ] Back 세팅
+  
+## Folder Tree
+```
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   ├── App.test.tsx
+│   ├── App.tsx
+│   ├── animations
+│   ├── components
+│   ├── element
+│   ├── hook
+│   ├── index.tsx
+│   ├── page
+│   ├── react-app-env.d.ts
+│   ├── reportWebVitals.ts
+│   ├── setupTests.ts
+│   ├── types
+│   │   └── type.d.ts
+│   └── utils
+├── tsconfig.json
+└── yarn.lock
+```
