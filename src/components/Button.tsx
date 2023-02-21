@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 const CustomButton = styled.button<ButtonPropsType>`
   cursor: pointer;
   background-color: ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.textColor1};
+  color: #ded9d9;
   border-radius: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
@@ -14,6 +14,20 @@ const CustomButton = styled.button<ButtonPropsType>`
       width: 7rem;
       height: 3.5rem;
       font-size: 1.35rem;
+    `}
+  ${(props) =>
+    props.wh === "l" &&
+    css`
+      width: 10rem;
+      height: 4rem;
+      font-size: 1.5rem;
+    `}
+    ${(props) =>
+    props.wh === "s" &&
+    css`
+      width: 6rem;
+      height: 3rem;
+      font-size: 1.3rem;
     `}
   &:hover {
     filter: brightness(85%);
