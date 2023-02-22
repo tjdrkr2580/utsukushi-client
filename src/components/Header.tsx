@@ -1,11 +1,14 @@
 import ToggleMode from "@element/ToggleMode";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Button from "./Button";
+import Button from "../element/Button";
 import useNavi from "@hook/useNavi";
+import { useSetRecoilState } from "recoil";
+import { modalState } from "@utils/recoil/atoms";
 
 const HeaderWrapper = styled.header`
   width: 100vw;
+  z-index: 998;
   padding: 0.8rem;
   position: fixed;
   display: flex;
@@ -27,13 +30,13 @@ const MenuWrapper = styled.section`
 `;
 
 const Header = () => {
-  const setPage = useNavi();
+  const setVisible = useSetRecoilState(modalState);
   return (
     <HeaderWrapper>
       <LinkTitle to="/">Utsukushi</LinkTitle>
       <MenuWrapper>
         <ToggleMode />
-        <Button onClick={() => setPage("/login")}>로그인</Button>
+        <Button onClick={() => setVisible(true)}>로그인</Button>
       </MenuWrapper>
     </HeaderWrapper>
   );

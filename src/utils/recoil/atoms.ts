@@ -6,6 +6,11 @@ export const darkmodeState = atom<boolean>({
   default: false,
 });
 
+export const modalState = atom<boolean>({
+  key: `state${v1()}`,
+  default: false,
+});
+
 export const userInfoState = atom({
   key: `state${v1()}`,
   default: {

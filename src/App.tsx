@@ -6,7 +6,6 @@ import { useRecoilValue } from "recoil";
 import { darkTheme, lightTheme } from "@utils/styles/theme";
 import GlobalStyle from "@utils/styles/GlobalStyle";
 import Home from "@page/Home";
-import Login from "@page/Login";
 import Footer from "@components/Footer";
 
 const RootWrapper = styled.div`
@@ -32,7 +31,6 @@ function App() {
           <Header />
           <Routes>
             <Route element={<Home />} path="/" />
-            <Route element={<Login />} path="/login" />
           </Routes>
           <Footer />
         </BrowserRouter>

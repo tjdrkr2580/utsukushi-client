@@ -26,3 +26,10 @@ export interface NavElementProps {
   elementIndex: number;
   onClick: () => void;
 }
+
+export interface InputProps {
+  children: ReactNode;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  type: string;
+  placehoder: string;
+}
