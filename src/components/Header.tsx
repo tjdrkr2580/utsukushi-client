@@ -2,6 +2,7 @@ import ToggleMode from "@element/ToggleMode";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import useNavi from "@hook/useNavi";
 
 const HeaderWrapper = styled.header`
   width: 100vw;
@@ -26,12 +27,13 @@ const MenuWrapper = styled.section`
 `;
 
 const Header = () => {
+  const setPage = useNavi();
   return (
     <HeaderWrapper>
       <LinkTitle to="/">Utsukushi</LinkTitle>
       <MenuWrapper>
         <ToggleMode />
-        <Button>로그인</Button>
+        <Button onClick={() => setPage("/login")}>로그인</Button>
       </MenuWrapper>
     </HeaderWrapper>
   );

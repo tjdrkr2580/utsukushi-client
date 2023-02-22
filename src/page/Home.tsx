@@ -1,7 +1,17 @@
-import React from "react";
+import Navbar from "@components/Navbar";
+import { SectionDefaultMaginPadding } from "@utils/styles/Minxin";
+import styled from "styled-components";
+
+const HomeWrapper = styled.main`
+  ${SectionDefaultMaginPadding}
+`;
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <HomeWrapper>
+      <Navbar />
+    </HomeWrapper>
+  );
 };
 
 export default Home;

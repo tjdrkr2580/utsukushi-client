@@ -17,3 +17,8 @@ export const absoluteCenter = css`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
+export const SectionDefaultMaginPadding = css`
+  margin-top: 12.5rem;
+  padding: 0 1rem;
+`;

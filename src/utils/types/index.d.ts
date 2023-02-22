@@ -19,3 +19,10 @@ export interface userInfo {
   photoURL: string;
   description: string | null;
 }
+
+export interface NavElementProps {
+  index: number;
+  text: string;
+  elementIndex: number;
+  onClick: () => void;
+}
