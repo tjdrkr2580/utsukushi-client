@@ -31,7 +31,7 @@
 
 ## **What did you do today?**
 
-- 2023 / 02 / 21
+- 2023 / 02 / 22
 
   - [ ] Back DB연동
   - [ ] Prisma 연동
