@@ -1,12 +1,12 @@
 import Navbar from "@components/Navbar";
 import Button from "@element/Button";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { modalState } from "@utils/recoil/atoms";
 import { flexCenter, SectionDefaultMaginPadding } from "@utils/styles/Minxin";
 import { modalVariants } from "@utils/styles/varients";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import { useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
 
 const HomeWrapper = styled.main`
@@ -63,11 +63,12 @@ const ModalForm = styled.form`
 `;
 
 const Home = () => {
-  const visible = useRecoilValue(modalState);
+  const [visible, setVisible] = useRecoilState(modalState);
   const { register, reset, handleSubmit } = useForm();
   const [sign, setSign] = useState(true);
   const onSignChange = () => {
     setSign(!sign);
+    reset();
   };
   const onSubmit = () => {
     if (sign === true) {
@@ -76,6 +77,7 @@ const Home = () => {
       onSignup();
     }
   };
+  const outSection = useRef<HTMLDivElement>(null);
   const onSignin = async () => {
     reset();
   };
@@ -87,11 +89,17 @@ const Home = () => {
       <Navbar />
       {visible === true && (
         <Modal
+          ref={outSection}
           onSubmit={handleSubmit(onSubmit)}
           variants={modalVariants}
           initial="start"
           animate="animate"
           exit="exit"
+          onClick={(e) => {
+            if (outSection.current === e.target) {
+              setVisible(false);
+            }
+          }}
         >
           <ModalForm>
             {sign === true ? (
