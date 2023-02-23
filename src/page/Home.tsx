@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useRecoilState } from "recoil";
 import styled from "styled-components";
+import { userDto } from "@utils/types";
 
 const HomeWrapper = styled.main`
   ${SectionDefaultMaginPadding}
@@ -22,6 +23,18 @@ const Modal = styled(motion.section)`
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
+`;
+
+const ErrorMessage = styled.p`
+  width: 12rem;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.15rem;
+  margin-right: 10rem;
+  padding-left: 0 !important;
+  margin: 0 6rem 0 0 !important;
+  font-weight: 500;
+  color: #ed4337;
 `;
 
 const ModalForm = styled.form`
@@ -63,21 +76,30 @@ const ModalForm = styled.form`
 `;
 
 const Home = () => {
+  const [pwdConfirm, setPwdConfirm] = useState("");
   const [visible, setVisible] = useRecoilState(modalState);
-  const { register, reset, handleSubmit } = useForm();
+  const onChangeConfirm = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPwdConfirm(e.target.value);
+  };
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const outSection = useRef<HTMLDivElement>(null);
   const [sign, setSign] = useState(true);
   const onSignChange = () => {
     setSign(!sign);
     reset();
   };
-  const onSubmit = () => {
+  const onSubmit = (data: any) => {
     if (sign === true) {
       onSignin();
     } else {
-      onSignup();
+      if (data.password === pwdConfirm) onSignup();
     }
   };
-  const outSection = useRef<HTMLDivElement>(null);
   const onSignin = async () => {
     reset();
   };
@@ -104,12 +126,45 @@ const Home = () => {
           <ModalForm>
             {sign === true ? (
               <>
-                <input placeholder="아이디" {...register("id")} />
+                <input
+                  placeholder="아이디"
+                  {...register("id", {
+                    required: {
+                      value: true,
+                      message: "id",
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "6",
+                    },
+                  })}
+                />
+                {errors.id?.message === "id" && (
+                  <ErrorMessage>아이디를 입력해주세요.</ErrorMessage>
+                )}
+                {errors.id?.message === "6" && (
+                  <ErrorMessage>6자 이상 입력해주세요.</ErrorMessage>
+                )}
                 <input
                   type="password"
                   placeholder="비밀번호"
-                  {...register("password")}
+                  {...register("password", {
+                    required: {
+                      value: true,
+                      message: "pwd",
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "6",
+                    },
+                  })}
                 />
+                {errors.password?.message === "pwd" && (
+                  <ErrorMessage>비밀번호를 입력해주세요.</ErrorMessage>
+                )}
+                {errors.password?.message === "6" && (
+                  <ErrorMessage>6자 이상 입력해주세요.</ErrorMessage>
+                )}
                 <p>
                   계정이 존재하지 않으신가요?{" "}
                   <span onClick={onSignChange}>회원가입</span>
@@ -118,13 +173,51 @@ const Home = () => {
               </>
             ) : (
               <>
-                <input placeholder="아이디" {...register("id")} />
+                <input
+                  placeholder="아이디"
+                  {...register("id", {
+                    required: {
+                      value: true,
+                      message: "id",
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "6",
+                    },
+                  })}
+                />
+                {errors.id?.message === "id" && (
+                  <ErrorMessage>아이디를 입력해주세요.</ErrorMessage>
+                )}
+                {errors.id?.message === "6" && (
+                  <ErrorMessage>6자 이상 입력해주세요.</ErrorMessage>
+                )}
                 <input
                   type="password"
                   placeholder="비밀번호"
-                  {...register("password")}
+                  {...register("password", {
+                    required: {
+                      value: true,
+                      message: "pwd",
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "6",
+                    },
+                  })}
                 />
-                <input type="password" placeholder="비밀번호 확인" />
+                {errors.password?.message === "pwd" && (
+                  <ErrorMessage>비밀번호를 입력해주세요.</ErrorMessage>
+                )}
+                {errors.password?.message === "6" && (
+                  <ErrorMessage>6자 이상 입력해주세요.</ErrorMessage>
+                )}
+                <input
+                  type="password"
+                  placeholder="비밀번호 확인"
+                  value={pwdConfirm}
+                  onChange={onChangeConfirm}
+                />
 
                 <p>
                   이미 계정이 존재하신가요?{" "}

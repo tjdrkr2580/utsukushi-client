@@ -19,9 +19,6 @@
 | Styled-components              | Front          |
 | React-Markdown                 | Front          |
 | Codemirror                     | Front          |
-| Nest                           | Back           |
-| MongoDB Alias                  | Back           |
-| Bcrypt                         | Back           |
 | ETC..                          | Etc..          |
 | Pretendard, Cascadia-code, etc | Font           |
 
@@ -31,9 +28,9 @@
 
 - 2023 / 02 / 23
 
-- [ ] 로그인, 회원가입 구현
-- [ ] 로그인 상태에 따른 헤더 변경
-- [ ] Mock API 두 개 연동하기
+  - [ ] 로그인, 회원가입 구현
+  - [ ] 로그인 상태에 따른 헤더 변경
+  - [ ] Mock API 두 개 연동하기
 
 - 2023 / 02 / 22
 
