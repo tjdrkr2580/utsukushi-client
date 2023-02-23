@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
         border: none;
         text-decoration: none;
         list-style: none;
+        transition: 0.25s background-color, 0.25s filter, 0.25s transform;
     }    
 `;
 

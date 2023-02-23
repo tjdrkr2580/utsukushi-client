@@ -3,10 +3,10 @@ export type ThemeTypes = {
   textColor1: string;
   textColor2: string;
   primary: string;
-  bigSize: number;
-  mediumSize: number;
-  smallSize: number;
-  defaultSize: number;
+  bigSize: string;
+  mediumSize: string;
+  smallSize: string;
+  defaultSize: string;
 };
 
 export const lightTheme: ThemeTypes = {
@@ -14,10 +14,10 @@ export const lightTheme: ThemeTypes = {
   textColor1: "#cbd1e1",
   textColor2: "#d9dfef",
   primary: "#635985",
-  bigSize: 2.8,
-  mediumSize: 2,
-  smallSize: 1.8,
-  defaultSize: 1.6,
+  bigSize: "2.8rem",
+  mediumSize: "2rem",
+  smallSize: "1.8rem",
+  defaultSize: "1.6rem",
 };
 
 export const darkTheme: ThemeTypes = {
@@ -25,8 +25,8 @@ export const darkTheme: ThemeTypes = {
   textColor1: "#5a6376",
   textColor2: "#313c54",
   primary: "#B088F9",
-  bigSize: 2.8,
-  mediumSize: 2,
-  smallSize: 1.8,
-  defaultSize: 1.6,
+  bigSize: "2.8rem",
+  mediumSize: "2rem",
+  smallSize: "1.8rem",
+  defaultSize: "1.6rem",
 };
