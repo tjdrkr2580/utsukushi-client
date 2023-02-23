@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useRecoilState } from "recoil";
 import styled from "styled-components";
-import { userDto } from "@utils/types";
+import { useMutation, useQuery } from "react-query";
+import { signInPost, signUpPost } from "@utils/axios/axios";
 
 const HomeWrapper = styled.main`
   ${SectionDefaultMaginPadding}
@@ -93,19 +94,19 @@ const Home = () => {
     setSign(!sign);
     reset();
   };
-  const onSubmit = (data: any) => {
-    if (sign === true) {
-      onSignin();
+  const onSubmit = async (dto: any) => {
+    if (sign !== true) {
+      const res = await onSignin.mutateAsync(dto);
+      console.log(res);
     } else {
-      if (data.password === pwdConfirm) onSignup();
+      if (dto.password === pwdConfirm) {
+        const res = await onSignup.mutateAsync(dto);
+        console.log(res);
+      }
     }
   };
-  const onSignin = async () => {
-    reset();
-  };
-  const onSignup = async () => {
-    reset();
-  };
+  const onSignin = useMutation(signInPost);
+  const onSignup = useMutation(signUpPost);
   return (
     <HomeWrapper>
       <Navbar />
@@ -221,7 +222,7 @@ const Home = () => {
 
                 <p>
                   이미 계정이 존재하신가요?{" "}
-                  <span onClick={onSignChange}>회원가입</span>
+                  <span onClick={onSignChange}>로그인</span>
                 </p>
                 <Button wh="l">회원가입</Button>
               </>

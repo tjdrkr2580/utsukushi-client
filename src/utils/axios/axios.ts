@@ -1,20 +1,23 @@
 import { userDto } from "./../types/index.d";
 import axios from "axios";
 
-const signInPost = async (dto: userDto) => {
-  const res = await axios.post(
+export const signInPost = async (dto: userDto) => {
+  const { data } = await axios.post(
     `${process.env.REACT_APP_LOGINMOCK}/register`,
     dto
   );
-  return res;
+  return data;
 };
 
-const signUpPost = async (dto: userDto) => {
-  const res = await axios.post(`${process.env.REACT_APP_LOGINMOCK}/login`, dto);
-  return res;
+export const signUpPost = async (dto: userDto) => {
+  const { data } = await axios.post(
+    `${process.env.REACT_APP_LOGINMOCK}/login`,
+    dto
+  );
+  return data;
 };
 
-const isUserConfirm = async () => {
-  const res = await axios.get(`${process.env.REACT_APP_LOGINMOCK}/user`);
-  return res;
+export const isUserConfirm = async () => {
+  const { data } = await axios.get(`${process.env.REACT_APP_LOGINMOCK}/user`);
+  return data;
 };
