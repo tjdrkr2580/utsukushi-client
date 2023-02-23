@@ -43,11 +43,6 @@
   - [x] Repository, Notion 세팅
   - [x] 로고, 색깔 선택
   - [x] Front 세팅
-  - [x] 버튼, 헤더까지.
-  - [x] theme을 설정함으로써 다크모드 적용
-  - [x] 버튼 커스텀, 파일 세분화
-
-## Folder Tree
 
 ```
 ├── public
