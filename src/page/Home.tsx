@@ -104,7 +104,7 @@ const Home = () => {
           <ModalForm>
             {sign === true ? (
               <>
-                <input placeholder="아이디" {...register("username")} />
+                <input placeholder="아이디" {...register("id")} />
                 <input
                   type="password"
                   placeholder="비밀번호"
@@ -118,9 +118,7 @@ const Home = () => {
               </>
             ) : (
               <>
-                <input placeholder="이름" {...register("name")} />
-
-                <input placeholder="아이디" {...register("username")} />
+                <input placeholder="아이디" {...register("id")} />
                 <input
                   type="password"
                   placeholder="비밀번호"

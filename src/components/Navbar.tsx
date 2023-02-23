@@ -12,7 +12,7 @@ const NavBar = styled.ul`
 
 const Navbar = () => {
   const [index, setIndex] = useState(0);
-  const PATCH_TEXT = ["인기", "최신"];
+  const PATCH_TEXT = ["인기"];
   const onChangePriamry = (i: number) => {
     setIndex(i);
   };

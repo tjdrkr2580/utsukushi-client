@@ -15,9 +15,12 @@ export interface InputPropsType {
 }
 
 export interface userInfo {
-  userName: string;
-  photoURL: string;
-  description: string | null;
+  id: string;
+}
+
+export interface userDto {
+  id: string;
+  password: string;
 }
 
 export interface NavElementProps {

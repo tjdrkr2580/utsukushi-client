@@ -27,15 +27,16 @@
 
 ## Ticket
 
-- [Utsukishi Ticket](https://tjdrkr2580.notion.site/2b361f31406f4230aa3e3df62746ae60?v=7c5b1c72a647454fb81bf3f354b0796d)
-
 ## **What did you do today?**
+
+- 2023 / 02 / 23
+
+- [ ] 로그인, 회원가입 구현
+- [ ] 로그인 상태에 따른 헤더 변경
+- [ ] Mock API 두 개 연동하기
 
 - 2023 / 02 / 22
 
-  - [x] Back DB연동
-  - [x] Prisma 연동
-  - [x] 회원가입 기능 추가 [Postman으로 테스트]
   - [x] 회원가입, 로그인 레이아웃 제작
   - [x] 모달 바깥쪽 클릭 시 꺼지도록 설정
   - [x] framer-motion variants.ts로 모듈화
@@ -45,7 +46,6 @@
   - [x] Repository, Notion 세팅
   - [x] 로고, 색깔 선택
   - [x] Front 세팅
-  - [x] Back 세팅
   - [x] 버튼, 헤더까지.
   - [x] theme을 설정함으로써 다크모드 적용
   - [x] 버튼 커스텀, 파일 세분화
